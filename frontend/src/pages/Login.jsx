@@ -31,17 +31,22 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-paper px-4 py-10">
+    <div 
+      className="flex min-h-screen items-center justify-center bg-cover bg-center px-4 py-10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1920')`
+      }}
+    >
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center text-center">
-          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-700 text-paper">
+          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-700 text-paper shadow-lg">
             <Wallet className="h-6 w-6" />
           </div>
-          <h1 className="font-display text-2xl font-semibold text-ink-800">SME Finance Hub</h1>
-          <p className="mt-1 text-sm text-ink-400">Sign in to manage your business finances</p>
+          <h1 className="font-display text-2xl font-semibold text-white drop-shadow-sm">SME Finance Hub</h1>
+          <p className="mt-1 text-sm text-slate-200">Sign in to manage your business finances</p>
         </div>
 
-        <div className="rounded-2xl bg-white p-6 shadow-card ring-1 ring-ink-50 sm:p-8">
+        <div className="rounded-2xl bg-white/95 backdrop-blur-md p-6 shadow-2xl ring-1 ring-white/20 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="email" className="mb-1 block text-sm font-medium text-ink-600">
@@ -82,7 +87,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={submitting}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-paper transition hover:bg-emerald-800 disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-paper transition hover:bg-emerald-800 disabled:opacity-60 shadow-md"
             >
               {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
               {submitting ? 'Signing in…' : 'Sign in'}
@@ -97,20 +102,20 @@ export default function Login() {
           </p>
         </div>
 
-        <div className="mt-5 rounded-xl border border-dashed border-ink-100 bg-white/60 p-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-300">Demo accounts</p>
+        <div className="mt-5 rounded-xl border border-white/20 bg-white/90 backdrop-blur-md p-4 shadow-lg">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-400">Demo accounts</p>
           <div className="flex flex-col gap-1.5 text-sm">
             <button
               type="button"
               onClick={() => fillDemo('owner@goldencrustbakery.com', 'Password123!')}
-              className="text-left text-ink-500 hover:text-emerald-700"
+              className="text-left text-ink-500 hover:text-emerald-700 transition"
             >
               <span className="font-medium text-ink-700">Business owner</span> — owner@goldencrustbakery.com / Password123!
             </button>
             <button
               type="button"
               onClick={() => fillDemo('admin@smefinancehub.com', 'Admin123!')}
-              className="text-left text-ink-500 hover:text-emerald-700"
+              className="text-left text-ink-500 hover:text-emerald-700 transition"
             >
               <span className="font-medium text-ink-700">Financial officer</span> — admin@smefinancehub.com / Admin123!
             </button>

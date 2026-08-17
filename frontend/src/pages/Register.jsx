@@ -43,17 +43,22 @@ export default function Register() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-paper px-4 py-10">
+    <div 
+      className="flex min-h-screen items-center justify-center bg-cover bg-center px-4 py-10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920')`
+      }}
+    >
       <div className="w-full max-w-md">
         <div className="mb-8 flex flex-col items-center text-center">
-          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-700 text-paper">
+          <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-700 text-paper shadow-lg">
             <Wallet className="h-6 w-6" />
           </div>
-          <h1 className="font-display text-2xl font-semibold text-ink-800">Create your account</h1>
-          <p className="mt-1 text-sm text-ink-400">Start tracking your business finances in minutes</p>
+          <h1 className="font-display text-2xl font-semibold text-white drop-shadow-sm">Create your account</h1>
+          <p className="mt-1 text-sm text-slate-200">Start tracking your business finances in minutes</p>
         </div>
 
-        <div className="rounded-2xl bg-white p-6 shadow-card ring-1 ring-ink-50 sm:p-8">
+        <div className="rounded-2xl bg-white/95 backdrop-blur-md p-6 shadow-2xl ring-1 ring-white/20 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
@@ -155,7 +160,7 @@ export default function Register() {
             <button
               type="submit"
               disabled={submitting}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-paper transition hover:bg-emerald-800 disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-paper transition hover:bg-emerald-800 disabled:opacity-60 shadow-md"
             >
               {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
               {submitting ? 'Creating account…' : 'Create account'}
