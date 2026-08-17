@@ -1,0 +1,75 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      colors: {
+        paper: {
+          DEFAULT: '#FAF8F3',
+          dark: '#F1ECE0',
+        },
+        ink: {
+          50: '#EEF1F6',
+          100: '#D3DAE6',
+          200: '#A8B6CC',
+          300: '#7C92B2',
+          400: '#536E97',
+          500: '#34517A',
+          600: '#233C5F',
+          700: '#16233D',
+          800: '#101A2D',
+          900: '#0A111D',
+        },
+        emerald: {
+          50: '#EAF6F0',
+          100: '#CFEBDF',
+          200: '#A0D7C0',
+          300: '#6FBE9E',
+          400: '#3FA07E',
+          500: '#1D8362',
+          600: '#146C4B',
+          700: '#0F5A3E',
+          800: '#0B4530',
+          900: '#073323',
+        },
+        amber: {
+          50: '#FDF6E3',
+          100: '#F9E8B8',
+          200: '#F3D989',
+          300: '#ECC85A',
+          400: '#E2B633',
+          500: '#C9971E',
+          600: '#A87817',
+          700: '#855D12',
+          800: '#63450D',
+          900: '#422E09',
+        },
+        brick: {
+          50: '#FBEEE9',
+          100: '#F4D2C4',
+          200: '#E9AC93',
+          300: '#DC8262',
+          400: '#CC6142',
+          500: '#B3492D',
+          600: '#963B23',
+          700: '#78301D',
+          800: '#5A2416',
+          900: '#3D180F',
+        },
+      },
+      fontFamily: {
+        display: ['"Lora"', 'serif'],
+        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+      },
+      boxShadow: {
+        card: '0 1px 2px rgba(22, 35, 61, 0.06), 0 1px 12px rgba(22, 35, 61, 0.05)',
+        lift: '0 4px 20px rgba(22, 35, 61, 0.10)',
+      },
+      backgroundImage: {
+        ledger: 'repeating-linear-gradient(to bottom, transparent, transparent 27px, rgba(22,35,61,0.045) 28px)',
+      },
+    },
+  },
+  plugins: [],
+};
