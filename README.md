@@ -1,18 +1,18 @@
 ```markdown
-# SME Finance Hub 📊
+ SME Finance Hub 📊
 
 A full-stack, cross-platform financial management and analytics platform designed for Small and Medium Enterprises (SMEs). **SME Finance Hub** helps business owners track income and expenses, generate and monitor invoices, and apply for micro-financing or business loans — complete with a dedicated Financial Officer console for review and approval and a companion mobile application.
 
 ---
 
-## 🚀 Live Demos
+ 🚀 Live Demos
 
 * **Web Console:** [smefinancehub.netlify.app](https://smefinancehub.netlify.app)
 * **Backend API:** Hosted on [Render](https://sme-finance-hub.onrender.com)
 
 ---
 
-## 🛠️ Tech Stack
+ 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -24,7 +24,7 @@ A full-stack, cross-platform financial management and analytics platform designe
 
 ---
 
-## 📂 Project Structure
+ 📂 Project Structure
 
 ```text
 sme-finance-hub/
@@ -60,9 +60,9 @@ sme-finance-hub/
 
 ---
 
-## 🚀 Getting Started
+ 🚀 Getting Started
 
-### Prerequisites
+ Prerequisites
 
 * **Node.js** 18+
 * **MongoDB** instance — local (`mongod` running on `127.0.0.1:27017`) or a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster.
