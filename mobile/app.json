@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "SME Hub",
+    "slug": "mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "smehub",
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smehub.mobile"
+    },
+    "android": {
+      "package": "com.smehub.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#0F172A"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "Allow SME Hub to use Face ID to protect your saved sign-in."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3441cd73-2583-4a72-99e0-feb880f9b135"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3441cd73-2583-4a72-99e0-feb880f9b135"
+    }
+  }
+}
